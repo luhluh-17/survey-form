@@ -7,37 +7,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="css/reseter.css" />
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="https://kit.fontawesome.com/0869152999.js" crossorigin="anonymous" defer></script>
   <title>Survey Form</title>
 </head>
 
 <body>
   <main class="card card-1 row">
+
     <div id="left-side" class="column">
-      <h1 id="title">Survey Form</h1>
-      <p id="description"> <strong>Social media</strong> are interactive digital channels that facilitate the creation and sharing of information, ideas, interests, and other forms of expression through virtual communities and networks.</p>
+      <h1 id="title">Favorite Social Media</h1>
+      <p id="description"> <strong>Social media</strong> are interactive digital channels that facilitate the creation
+        and sharing of information, ideas, interests, and other forms of expression through virtual communities and
+        networks.</p>
       <img src="images/survey-image.png" alt="survey form image" id="image">
     </div>
+
     <div id="right-side" class="column row">
       <form action="html/response.html" method="get" id="survey-form">
-        <div>
-          <label for="name" id="name-label">Name</label> <br>
-          <input type="text" name="name" id="name" placeholder="John Doe" required> <br>
+        <div class="row">
+          <div class="column">
+            <label for="name" id="name-label">Name</label> <br>
+            <input type="text" name="name" id="name" placeholder="John Doe" required> <br>
+          </div>
+          <div class="column">
+            <label for="email" id="email-label">Email Address</label> <br>
+            <input type="email" name="email" id="email" placeholder="example@email.com" required> <br>
+          </div>
         </div>
-        <div>
-          <label for="email" id="email-label">Email Address</label> <br>
-          <input type="email" name="email" id="email" placeholder="example@email.com" required> <br>
-        </div>
-        <div>
-          <label for="number" id="number-label">Age</label> <br>
-          <input type="number" name="" id="number" placeholder="How old are you?" min="13" max="100"> <br>
-        </div>
-        <div>
-          <label for="gender" id="gender-label">Gender</label>
-          <select name="gender" id="gender">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-          </select>
+
+        <div class="row">
+          <div class="column">
+            <label for="number" id="number-label">Age</label> <br>
+            <input type="number" name="" id="number" placeholder="How old are you?" min="13" max="100"> <br>
+          </div>
+          <div class="column">
+            <label for="gender" id="gender-label">Gender</label>
+            <br>
+            <select name="gender" id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
         </div>
         <div class="row">
           <div class="column">
@@ -45,52 +56,65 @@
             <div>
               <label for="rb-facebook">
                 <input type="radio" name="radio" value="Facebook" id="rb-facebook" required>
+                <i class="fa-brands fa-facebook"></i>
                 Facebook
               </label>
               <br>
               <label for="rb-twitter">
                 <input type="radio" name="radio" value="Twitter" id="rb-twitter">
+                <i class="fa-brands fa-twitter-square"></i>
                 Twitter
               </label>
               <br>
               <label for="rb-instagram">
                 <input type="radio" name="radio" value="Instagram" id="rb-instagram">
+                <i class="fa-brands fa-instagram-square"></i>
                 Instagram
               </label>
               <br>
             </div>
           </div>
+        </div>
+        <div class="row">
           <div class="column">
             <label for="checkbox" id="checkbox-label">2. Which device you used?</label> <br>
             <div>
               <label for="cb-smartphone">
-                <input type="checkbox" name="checkbox" id="cb-smartphone" >
+                <input type="checkbox" name="checkbox" id="cb-smartphone">
+                <i class="fa-solid fa-mobile-screen"></i>
                 Smartphone
               </label>
               <br>
               <label for="cb-tablet">
                 <input type="checkbox" name="checkbox" id="cb-tablet">
+                <i class="fa-solid fa-tablet-screen-button"></i>
                 Tablet
               </label>
               <br>
               <label for="cb-laptop">
                 <input type="checkbox" name="checkbox" id="cb-laptop">
+                <i class="fa-solid fa-laptop"></i>
                 Laptop
               </label>
               <br>
               <label for="cb-desktop">
                 <input type="checkbox" name="checkbox" id="cb-desktop">
+                <i class="fa-solid fa-computer"></i>
                 Desktop
               </label>
               <br>
             </div>
           </div>
         </div>
-        <div>
-          <label for="message" id="message-label">3. What makes this social media different from the others?</label> <br>
-          <textarea name="message" id="message" placeholder="Explain briefly in a short sentence." cols="60"
-            rows="5"></textarea>
+        <div class="row">
+          <div class="column">
+            <label for="message" id="message-label">3. What makes this social media different from the others?</label>
+            <br>
+            <textarea name="message" id="message" placeholder="Explain briefly in a short sentence." cols="60"
+              rows="5"></textarea>
+          </div>
         </div>
+
         <div><button id="submit" class="btn">Submit</button></div>
       </form>
     </div>
