@@ -56,6 +56,12 @@ label, input, textarea{
   padding: 2rem;
 }
 
+.response {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
 .btn {
   display: flex;
   margin: 30px auto;
