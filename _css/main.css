@@ -1,25 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background: url("../images/pattern.jpg") no-repeat center center/cover;
+  background-image: url('../images/pattern.jpg');
   background-size: contain;
-  font-family: "Raleway", sans-serif;
-  height: 100vh;
+  margin: 0px 2rem;
 }
 
-h1 {
-  color: #f24e3d;
+h1{
+  color: #d33129;
 }
 
 textarea {
   resize: none;
 }
 
-label {
+label{
   margin: 8px 0px;
 }
 
@@ -34,6 +27,7 @@ label {
   flex: 100%;
 }
 
+
 .card {
   background: #ffccca;
   border-radius: 2px;
@@ -41,25 +35,17 @@ label {
 }
 
 .card-1 {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
-#image {
+#image{
   margin: 16px 25px;
   width: 360px;
 }
 
-#number {
-  width: 75%;
-}
-
-#name {
-  width: 75%;
-}
-
-#email {
-  width: 75%;
+#number, #name, #email{
+  width: 75%
 }
 
 #left-side {
@@ -67,6 +53,7 @@ label {
   padding: 2rem;
   height: max-content;
   text-align: center;
+
 }
 
 #right-side {
@@ -84,23 +71,26 @@ label {
   display: flex;
   margin: 30px auto;
   padding: 8px;
+
   overflow: hidden;
+
   border-width: 0;
   outline: none;
   border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
   background-color: #f24e3d;
-  color: white;
-  transition: background-color 0.3s;
+  color: #ecf0f1;
+  
+  transition: background-color .3s;
 }
-.btn:hover {
-  background-color: #e2343d;
-}
-.btn:focus {
+
+.btn:hover, .btn:focus {
   background-color: #e2343d;
 }
 
-input[type=radio]:after {
+
+input[type='radio']:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -108,12 +98,13 @@ input[type=radio]:after {
   left: -1px;
   position: relative;
   background-color: #d1d3d1;
-  content: "";
+  content: '';
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
 }
-input[type=radio]:checked:after {
+
+input[type='radio']:checked:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -121,10 +112,9 @@ input[type=radio]:checked:after {
   left: -1px;
   position: relative;
   background-color: #f24e3d;
-  content: "";
+  content: '';
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
 }
 
-/*# sourceMappingURL=main.css.map */

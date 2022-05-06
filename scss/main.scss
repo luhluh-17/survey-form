@@ -1,3 +1,12 @@
+$primary-color: #f24e3d;
+$primary-dark-color: #e2343d;
+
+$secondary-color: #ffccca;
+$radio-off-color: #d1d3d1;
+
+$font: 'Raleway', sans-serif;
+$bg-image: '../images/pattern.jpg';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,14 +14,14 @@
 }
 
 body {
-  background: url("../images/pattern.jpg") no-repeat center center/cover;
+  background: url($bg-image) no-repeat center center/cover;
   background-size: contain;
-  font-family: "Raleway", sans-serif;
+  font-family: $font;
   height: 100vh;
 }
 
 h1 {
-  color: #f24e3d;
+  color: $primary-color;
 }
 
 textarea {
@@ -35,7 +44,7 @@ label {
 }
 
 .card {
-  background: #ffccca;
+  background: $secondary-color;
   border-radius: 2px;
   margin: 2rem;
 }
@@ -89,42 +98,45 @@ label {
   outline: none;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-  background-color: #f24e3d;
+  background-color: $primary-color;
   color: white;
   transition: background-color 0.3s;
-}
-.btn:hover {
-  background-color: #e2343d;
-}
-.btn:focus {
-  background-color: #e2343d;
-}
-
-input[type=radio]:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #d1d3d1;
-  content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
-}
-input[type=radio]:checked:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
-  background-color: #f24e3d;
-  content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
+  &:hover {
+    background-color: $primary-dark-color;
+  }
+  &:focus {
+    background-color: $primary-dark-color;
+  }
 }
 
-/*# sourceMappingURL=main.css.map */
+input[type="radio"] {
+  &:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: $radio-off-color;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }
+  
+  &:checked {
+    &:after {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      top: -2px;
+      left: -1px;
+      position: relative;
+      background-color: $primary-color;
+      content: "";
+      display: inline-block;
+      visibility: visible;
+      border: 2px solid white;
+    }
+  }
+}
