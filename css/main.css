@@ -37,11 +37,8 @@ label {
 .card {
   background: #ffccca;
   border-radius: 2px;
-  margin: 2rem;
-}
-
-.card-1 {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin: 2rem;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -50,15 +47,7 @@ label {
   width: 360px;
 }
 
-#number {
-  width: 75%;
-}
-
-#name {
-  width: 75%;
-}
-
-#email {
+#email, #name, #number {
   width: 75%;
 }
 
@@ -70,7 +59,7 @@ label {
 }
 
 #right-side {
-  background: #fff;
+  background: white;
   padding: 2rem;
 }
 
@@ -100,31 +89,24 @@ label {
   background-color: #e2343d;
 }
 
-input[type=radio]:after {
+input[type=radio]:checked:after, input[type=radio]:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
   top: -2px;
   left: -1px;
   position: relative;
-  background-color: #d1d3d1;
   content: "";
   display: inline-block;
   visibility: visible;
   border: 2px solid white;
 }
+
+input[type=radio]:after {
+  background-color: #d1d3d1;
+}
 input[type=radio]:checked:after {
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
-  top: -2px;
-  left: -1px;
-  position: relative;
   background-color: #f24e3d;
-  content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
 }
 
 /*# sourceMappingURL=main.css.map */

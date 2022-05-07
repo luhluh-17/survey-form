@@ -1,11 +1,4 @@
-$primary-color: #f24e3d;
-$primary-dark-color: #e2343d;
-
-$secondary-color: #ffccca;
-$radio-off-color: #d1d3d1;
-
-$font: 'Raleway', sans-serif;
-$bg-image: '../images/pattern.jpg';
+@use "constant" as *;
 
 * {
   box-sizing: border-box;
@@ -44,42 +37,28 @@ label {
 }
 
 .card {
-  background: $secondary-color;
-  border-radius: 2px;
-  margin: 2rem;
+  @include card-template();
 }
 
-.card-1 {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
 
 #image {
   margin: 16px 25px;
   width: 360px;
 }
 
-#number {
-  width: 75%;
-}
-
-#name {
-  width: 75%;
-}
-
-#email {
+#email, #name, #number {
   width: 75%;
 }
 
 #left-side {
-  background: #ffccca;
+  background: $secondary-color;
   padding: 2rem;
   height: max-content;
   text-align: center;
 }
 
 #right-side {
-  background: #fff;
+  background: white;
   padding: 2rem;
 }
 
@@ -109,34 +88,30 @@ label {
   }
 }
 
+// Inheritance
+%radio-btn {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
 input[type="radio"] {
   &:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
+    @extend %radio-btn;
     background-color: $radio-off-color;
-    content: "";
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
   }
-  
+
   &:checked {
     &:after {
-      width: 15px;
-      height: 15px;
-      border-radius: 15px;
-      top: -2px;
-      left: -1px;
-      position: relative;
+      @extend %radio-btn;
       background-color: $primary-color;
-      content: "";
-      display: inline-block;
-      visibility: visible;
-      border: 2px solid white;
     }
   }
 }
