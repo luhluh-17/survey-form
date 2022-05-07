@@ -1,16 +1,11 @@
-@use "constant" as *;
+@use 'constant' as *;
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  @include resetter;
 }
 
 body {
-  background: url($bg-image) no-repeat center center/cover;
-  background-size: contain;
-  font-family: $font;
-  height: 100vh;
+  @include main-bg;
 }
 
 h1 {
@@ -39,7 +34,6 @@ label {
 .card {
   @include card-template();
 }
-
 
 #image {
   margin: 16px 25px;

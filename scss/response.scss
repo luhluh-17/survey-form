@@ -1,0 +1,19 @@
+@use 'constant' as *;
+
+* {
+  @include resetter;
+}
+
+body {
+  @include main-bg;
+}
+
+.card {
+  @include card-template();
+  text-align: center;
+}
+
+#image {
+  margin: 16px 25px;
+  width: 360px;
+}
