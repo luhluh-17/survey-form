@@ -15,6 +15,10 @@ h1 {
   color: #f24e3d;
 }
 
+i {
+  margin: 0 1rem;
+}
+
 textarea {
   resize: none;
 }
